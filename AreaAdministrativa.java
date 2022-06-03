@@ -1,28 +1,28 @@
-package CadenaEs;
+package CadenaEg;
 
-public class AreaAdministrativa implements InterfaceArea {
-
-    private InterfaceArea next;
+public class AreaAdministrativa implements InterfaceAreaEg{
+    
+    private InterfaceAreaEg next;
     private boolean operando = false;
-
+    
     @Override
-    public void setNext(InterfaceArea interfaceArea) {
-        this.next = interfaceArea;
+    public void setNext(InterfaceAreaEg InterfaceAreaEg){
+        this.next = InterfaceAreaEg;
     }
 
     @Override
-    public InterfaceArea getNext() {
+    public InterfaceAreaEg getNext() {
         return this.next;
     }
 
     @Override
-    public void clasificacion(int opcion) {
-        if (opcion == 7 || opcion == 8 || opcion == 9 || opcion == 10 || opcion == 11) {
-            System.out.println("Su petición sera atendida por el Area Administrativa ");
-            this.next.clasificacion(opcion);
+    public void clasificacion1(int opcion) {
+        if (opcion == 4 || opcion == 5 || opcion == 6) {
+            System.out.println("Su petición sera atendida por el Area Administrativa");
+            this.next.clasificacion1(opcion);
             operando = true;
         } else {
-            this.next.clasificacion(opcion);
+            this.next.clasificacion1(opcion);
         }
     }
     

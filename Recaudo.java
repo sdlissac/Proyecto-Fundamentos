@@ -1,26 +1,27 @@
-package CadenaEs;
+package CadenaEg;
 
-public class Recaudo implements InterfaceArea {
+public class Recaudo implements InterfaceAreaEg {
 
-    private InterfaceArea next;
+    private InterfaceAreaEg next;
     private boolean operando = false;
 
     @Override
-    public void setNext(InterfaceArea interfaceArea) {
-        this.next = interfaceArea;
+    public void setNext(InterfaceAreaEg InterfaceAreaEg) {
+        this.next = InterfaceAreaEg;
     }
 
     @Override
-    public InterfaceArea getNext() {
+    public InterfaceAreaEg getNext() {
         return this.next;
     }
 
     @Override
-    public void clasificacion(int opcion) {
-        if (opcion == 12) {
+    public void clasificacion1(int opcion) {
+        if (opcion == 7) {
             System.out.println("Su petición sera atendida por Recaudo\n");
             operando = true;
         } else {
+            System.out.println("Tu peticion no puede ser atendita");
         }
     }
     

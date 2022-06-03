@@ -1,28 +1,28 @@
-package CadenaEs;
 
-public class DirectorPrograma implements InterfaceArea {
+package CadenaEg;
 
-    private InterfaceArea next;
-    
+public class DirectorPrograma implements InterfaceAreaEg{
+
+    private InterfaceAreaEg next;
     private boolean operando = false;
-
+            
     @Override
-    public void setNext(InterfaceArea interfaceArea) {
-        this.next = interfaceArea;
+    public void setNext(InterfaceAreaEg InterfaceAreaEg){
+        this.next = InterfaceAreaEg;
     }
 
     @Override
-    public InterfaceArea getNext() {
+    public InterfaceAreaEg getNext() {
         return this.next;
     }
 
     @Override
-    public void clasificacion(int opcion) {
-        if (opcion == 5 || opcion == 6) {
+    public void clasificacion1(int opcion) {
+        if (opcion == 3) {
             System.out.println("Su petición sera atendida por el Director del Programa\n");
             operando = true;
         } else {
-            this.next.clasificacion(opcion);
+            this.next.clasificacion1(opcion);
         }
     }
     

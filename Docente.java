@@ -1,27 +1,28 @@
-package CadenaEs;
+package CadenaEg;
 
-public class Docente implements InterfaceArea {
-
-    private InterfaceArea next;
+public class Docente implements InterfaceAreaEg{
+    
+    private InterfaceAreaEg next;
+    
     private boolean operando = false;
-
+    
     @Override
-    public void setNext(InterfaceArea interfaceArea) {
-        this.next = interfaceArea;
+    public void setNext(InterfaceAreaEg InterfaceAreaEg){
+        this.next = InterfaceAreaEg;
     }
 
     @Override
-    public InterfaceArea getNext() {
+    public InterfaceAreaEg getNext() {
         return this.next;
     }
 
     @Override
-    public void clasificacion(int opcion) {
-        if (opcion == 1 || opcion == 2 || opcion == 3) {
+    public void clasificacion1(int opcion) {
+        if (opcion == 1) {
             System.out.println("Su petición sera atendida por un Docente\n");
             operando = true;
         } else {
-            this.next.clasificacion(opcion);
+            this.next.clasificacion1(opcion);
         }
     }
     
